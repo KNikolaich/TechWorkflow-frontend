@@ -61,7 +61,7 @@ export const LoginPage = () => {
         <div className="bg-blue-600 p-2 rounded-lg">
           <ShieldCheck className="text-white" size={24} />
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПоток</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПлан</h1>
       </div>
       
       <div className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-[#E5E5E5] w-full max-w-md">
@@ -134,7 +134,7 @@ export const LoginPage = () => {
       </div>
       
       <p className="mt-8 text-xs text-gray-400 uppercase tracking-widest">
-        Безопасный корпоративный доступ
+        Корпоративный доступ
       </p>
       <DbConnectionIndicator />
     </div>

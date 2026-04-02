@@ -41,7 +41,7 @@ export const RegisterPage = () => {
         <div className="bg-blue-600 p-2 rounded-lg">
           <UserPlus className="text-white" size={24} />
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПоток</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПлан</h1>
       </div>
       
       <div className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-[#E5E5E5] w-full max-w-md">

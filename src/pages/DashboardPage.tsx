@@ -65,7 +65,7 @@ export const DashboardPage = () => {
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="p-6 border-b border-[#E5E5E5] flex items-center justify-between">
-          <h1 className="text-xl font-bold tracking-tight text-blue-600">ТехПоток</h1>
+          <h1 className="text-xl font-bold tracking-tight text-blue-600">ТехПлан</h1>
           <button className="lg:hidden p-1" onClick={() => setIsMobileMenuOpen(false)}>
             <X size={20} />
           </button>
