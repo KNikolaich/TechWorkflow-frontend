@@ -56,17 +56,17 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-bg-primary flex flex-col items-center justify-center p-4 transition-colors duration-300">
       <div className="mb-8 flex items-center space-x-2">
-        <div className="bg-blue-600 p-2 rounded-lg">
+        <div className="bg-accent p-2 rounded-lg">
           <ShieldCheck className="text-white" size={24} />
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПлан</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-text-primary">ТехПлан</h1>
       </div>
       
-      <div className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-[#E5E5E5] w-full max-w-md">
+      <div className="bg-bg-secondary p-8 rounded-2xl shadow-xl border border-gray-200/20 w-full max-w-md transition-colors duration-300">
         <div className="text-center mb-8">
-          <h2 className="text-xl font-bold text-gray-900">С возвращением</h2>
+          <h2 className="text-xl font-bold text-text-primary">С возвращением</h2>
           <p className="text-gray-500 text-sm mt-1">Пожалуйста, введите свои данные для входа</p>
         </div>
 
@@ -78,42 +78,42 @@ export const LoginPage = () => {
 
         <form className="space-y-4" onSubmit={handleLogin}>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Логин или Почта</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Логин или Почта</label>
             <input 
               type="text" 
               required
               value={login}
               onChange={(e) => setLogin(e.target.value)}
               placeholder="Введите ваш логин"
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
               disabled={isLoading}
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Пароль</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Пароль</label>
             <input 
               type="password" 
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
               disabled={isLoading}
             />
           </div>
           
           <div className="flex items-center justify-between text-sm">
             <label className="flex items-center space-x-2 cursor-pointer">
-              <input type="checkbox" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <input type="checkbox" className="rounded border-gray-300 text-accent focus:ring-accent" />
               <span className="text-gray-600">Запомнить меня</span>
             </label>
-            <a href="#" className="text-blue-600 font-medium hover:underline">Забыли пароль?</a>
+            <a href="#" className="text-accent font-medium hover:underline">Забыли пароль?</a>
           </div>
 
           <button 
             type="submit"
             disabled={isLoading}
-            className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-bold flex items-center justify-center space-x-2 hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 disabled:opacity-70"
+            className="w-full bg-accent text-white py-2.5 rounded-lg font-bold flex items-center justify-center space-x-2 hover:opacity-90 transition shadow-lg shadow-accent/20 disabled:opacity-70"
           >
             {isLoading ? (
               <Loader2 className="animate-spin" size={18} />
@@ -124,17 +124,17 @@ export const LoginPage = () => {
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-gray-100 text-center">
+        <div className="mt-8 pt-6 border-t border-gray-200/20 text-center">
           <p className="text-sm text-gray-500">
-            Нет аккаунта? <a href="#" className="text-blue-600 font-medium hover:underline">Связаться с админом</a>
+            Нет аккаунта? <a href="#" className="text-accent font-medium hover:underline">Связаться с админом</a>
             <br />
-            <Link to="/register" className="text-blue-600 font-medium hover:underline">зарегистрироваться</Link>
+            <Link to="/register" className="text-accent font-medium hover:underline">зарегистрироваться</Link>
           </p>
         </div>
       </div>
       
       <p className="mt-8 text-xs text-gray-400 uppercase tracking-widest">
-        Корпоративный доступ
+        Безопасный корпоративный доступ
       </p>
       <DbConnectionIndicator />
     </div>

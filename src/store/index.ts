@@ -39,6 +39,11 @@ export const useThemeStore = create<ThemeState>()(
     }),
     {
       name: 'theme-storage',
+      onRehydrateStorage: () => (state) => {
+        if (state) {
+          document.documentElement.setAttribute('data-theme', state.theme);
+        }
+      },
     }
   )
 );

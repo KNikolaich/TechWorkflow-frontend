@@ -36,17 +36,17 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-bg-primary flex flex-col items-center justify-center p-4 transition-colors duration-300">
       <div className="mb-8 flex items-center space-x-2">
-        <div className="bg-blue-600 p-2 rounded-lg">
+        <div className="bg-accent p-2 rounded-lg">
           <UserPlus className="text-white" size={24} />
         </div>
-        <h1 className="text-2xl font-bold tracking-tight text-[#1A1A1A]">ТехПлан</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-text-primary">ТехПлан</h1>
       </div>
       
-      <div className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-500/5 border border-[#E5E5E5] w-full max-w-md">
+      <div className="bg-bg-secondary p-8 rounded-2xl shadow-xl border border-gray-200/20 w-full max-w-md transition-colors duration-300">
         <div className="text-center mb-8">
-          <h2 className="text-xl font-bold text-gray-900">Регистрация</h2>
+          <h2 className="text-xl font-bold text-text-primary">Регистрация</h2>
           <p className="text-gray-500 text-sm mt-1">Создайте новый аккаунт</p>
         </div>
 
@@ -58,61 +58,61 @@ export const RegisterPage = () => {
 
         <form className="space-y-4" onSubmit={handleRegister}>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Имя пользователя</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Имя пользователя</label>
             <input 
               type="text" 
               required
               value={formData.userName}
               onChange={(e) => setFormData({...formData, userName: e.target.value})}
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Email</label>
             <input 
               type="email" 
               required
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Полное имя</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Полное имя</label>
             <input 
               type="text" 
               required
               value={formData.fullName}
               onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Роль</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Роль</label>
             <select 
               value={formData.role}
               onChange={(e) => setFormData({...formData, role: e.target.value})}
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
             >
               <option value="worker">Работник</option>
               <option value="manager">Руководитель</option>
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Пароль</label>
+            <label className="block text-sm font-medium text-text-primary mb-1">Пароль</label>
             <input 
               type="password" 
               required
               value={formData.password}
               onChange={(e) => setFormData({...formData, password: e.target.value})}
-              className="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+              className="w-full px-4 py-2 bg-bg-primary border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
             />
           </div>
 
           <button 
             type="submit"
             disabled={isLoading}
-            className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-bold flex items-center justify-center space-x-2 hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 disabled:opacity-70"
+            className="w-full bg-accent text-white py-2.5 rounded-lg font-bold flex items-center justify-center space-x-2 hover:opacity-90 transition shadow-lg shadow-accent/20 disabled:opacity-70"
           >
             {isLoading ? (
               <Loader2 className="animate-spin" size={18} />
@@ -123,9 +123,9 @@ export const RegisterPage = () => {
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-gray-100 text-center">
+        <div className="mt-8 pt-6 border-t border-gray-200/20 text-center">
           <p className="text-sm text-gray-500">
-            Уже есть аккаунт? <a href="/login" className="text-blue-600 font-medium hover:underline">Войти</a>
+            Уже есть аккаунт? <a href="/login" className="text-accent font-medium hover:underline">Войти</a>
           </p>
         </div>
       </div>
